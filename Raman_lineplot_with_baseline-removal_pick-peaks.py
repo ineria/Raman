@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Feb 19 10:57:15 2020
 
-@author: ms01106
 
 """
 ##These are libraries that are imported in order to make the program work. Best just to leave these as they are now
@@ -26,10 +24,10 @@ from matplotlib.text import Annotation
 """This is where you set up all your data.
 I tried to write the program in a way that you only need to make changes here once and don't need to scroll through the entire script"""
 
-data_dir = "//surrey.ac.uk/personal/HS129/ms01106/.System/Desktop/Katrin Raman Scripts/" ##useful to set up the data directory so that your script doesn't have to be in the same folder as your data
-data_files =sorted(glob.glob(data_dir+'2020.01_gr bl 50k 600s large 0d rs 2200_Acq??.txt')) ##to identify all the data you want to read in they have to have some common element in the naming. Best works naming series the same and add Acq00 at the end. This then makes it easy to read in all data at the same time in the correct order
+data_dir = "" ## set up the data directory 
+data_files =sorted(glob.glob(data_dir+'name_Acq??.txt')) ##to identify all the data you want to read in they have to have some common element in the naming. Best works naming series the same and add Acq00 at the end. This then makes it easy to read in all data at the same time in the correct order
 data_file_count = int(len(os.listdir(data_dir))+1)
-series='2020.01_gr bl 50k 600s large 0d rs 2200_' ##part of the long filename to be removed. needed if peaklists are wanted in seperate files. Instead of the long name they will just be acq_x_peaks.txt
+series='name' ##part of the long filename to be removed. needed if peaklists are wanted in seperate files. Instead of the long name they will just be acq_x_peaks.txt
 
 """for baseline correction """
 l=10^2
