@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Jul 12 12:17:28 2019
 
-@author: ms01106
 """
 import numpy as np
 import matplotlib.pyplot as plt
@@ -11,19 +9,19 @@ from math import floor
 
 """This code takes 2D map ratio data and transforms them into a 1D plot"""
 
-data_dir="//surrey.ac.uk/Research/Malin_Schulz_PhDproject/Experimental/Raman/22AY04/"
+data_dir="" #specify data directory
 
 """
     In this part of the code the parameters are defined. This specifies where the data are found
     Takes filenames and names for components
     Pay attention to enter correct STEPSIZE !!!
 """
-date= "20200123/"
-filename="LASN191110_1-1"
-filename_small="LASN191110_1-1_bs_Map1635.txt"
-filename_large="LASN191110_1-1_bs_Map811.txt"
-large= "Latex A"
-small= "SN191109"
+date= "date/"
+filename="name"
+filename_small="name_component1_wavenumber.txt"
+filename_large="name_component2_wavenumber.txt"
+large= "component2"
+small= "component1"
 
 step=20 ##stepsize in micrometer between each spectrum
 
