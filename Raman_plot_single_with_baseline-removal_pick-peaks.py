@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Feb 19 10:57:15 2020
 
-@author: ms01106
 """
 
 import matplotlib.pyplot as plt
@@ -11,10 +9,10 @@ from scipy import sparse
 from scipy.sparse.linalg import spsolve
 from scipy import signal 
 
-data_dir = "//surrey.ac.uk/personal/HS129/ms01106/.System/Desktop/Katrin Raman Scripts/" 
-wave,intensity=np.loadtxt(data_dir+'2020.01_gr bl 50k 600s large 0d rs 2200_Acq28.txt', delimiter='\t',comments='#').T[[0,1]]
+data_dir = "" #specify data directory
+wave,intensity=np.loadtxt(data_dir+'name.txt', delimiter='\t',comments='#').T[[0,1]]
 
-
+#solution found on stackoverflow https://stackoverflow.com/a/45719454/11777633
 def baseline_als_optimized(y, lam, p, niter=10):
     L = len(y)
     D = sparse.diags([1,-2,1],[0,-1,-2], shape=(L,L-2))
