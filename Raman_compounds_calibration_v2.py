@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Spyder Editor
 
-This is a temporary script file.
-"""
 
 import os
 import matplotlib.pyplot as plt
@@ -14,20 +10,20 @@ from scipy import stats
 
 ## setup files etc
 #data 
-data_dir = "//surrey.ac.uk/Research/Malin_Schulz_PhDproject/Experimental/Raman/22AY04/20200211/"
+data_dir = "" #specify data directory
 data_file_count = int(len(os.listdir(data_dir))+1) # +1 later!
 data_files =sorted(glob.glob(data_dir+'*Average*_Acq*.txt'))
 
 #set compounds and filename
-name="LASN191110"
-large= "Latex A"
-small= "SN191110"
+name="filename"
+large= "component 1"
+small= "component 2"
 
 
-if 'small=SN191110':
-        wave_small,wave_large=(247,730)
+if 'small=component 2':
+        wave_small,wave_large=(247,730) #lines in txt file where relevant peak data can be found
         
-elif 'small=Daotan':
+elif 'small=component 3':
         wave_small,wave_large=(622,189)
 
 ## selecting specific wavenumber from files and extract intensity for each spectrum to new file
